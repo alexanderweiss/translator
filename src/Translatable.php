@@ -222,8 +222,8 @@ trait Translatable
     protected function getArrayableAttributes()
     {
         return array_merge(
-            parent::getArrayableAttributes($this->attributes),
-            $this->getTranslation()->getArrayableAttributes()
+            $this->getTranslation()->getArrayableAttributes(),
+            parent::getArrayableAttributes($this->attributes)
         );
     }
 
